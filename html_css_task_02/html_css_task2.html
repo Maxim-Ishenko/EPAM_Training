@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Форма html</title>
+    <style>
+		.form {width: 450px; 
+			margin: 0px; 
+			padding: 5px;}
+
+		.form h2 {font-family: Georgia, Times, "Times New Roman"; 
+			margin-bottom: 0px;}
+
+		.form .help {color:#ff0000; 
+             border-bottom: 2px solid #000; 
+             margin: 3px 2px 20px 2px; 
+             padding-bottom: 7px}
+
+		.form label {width: 120px; 
+             float: left;}
+
+		.form input {margin-right: 20px; 
+             border-radius: 5px; 
+             padding: 5px;
+             border: 1px solid black;}
+
+		.form textarea {border-radius: 5px; 
+                padding: 5px; 
+                border: 1px solid black;}
+
+		.div {margin-bottom: 20px;}
+
+		.form button {position: relative; 
+              left: 90px;
+              padding: 5px;
+              width: 90px;
+              border-radius: 5px;
+              border: 1px solid black;}
+
+		.form .hint {border: 1px solid red;
+             padding: 5px;
+             border-radius: 5px;
+             font-size: 11pt;
+             background-color: #f00;
+             color: #fff}
+
+		.hint::before {content: "";
+               position: absolute;
+               margin: 7px 0 0 -12px;
+               width: 0; 
+               height: 0; 
+               border-top: 7px solid transparent;
+               border-bottom: 7px solid transparent;  
+               border-right:7px solid red;}
+	</style>
+  </head>
+  
+  <body>
+
+   <form class="form" action="" method="post" name="form">
+   
+   <div><h2>Form Here</h2></div>
+   <div class="help">* required fields</div>
+   
+   <div class="div">
+     <label for="name">Name:</label>
+     <input type="text" name="name" placeholder="Gena Pupkin">
+   </div>
+     
+   <div class="div">
+     <label for="mail">E-mail:</label>
+     <input type="email" name="mail" placeholder="login@domen.com"> 
+     <span class="hint">Form field hint</span>
+   </div>
+
+   <div class="div">
+     <label for="web">Website:</label>
+     <input type="url" name="web" placeholder="http://site.com">
+     <span class="hint">Form field hint</span>
+   </div>
+   
+   <div class="div">
+     <label for="sms">Message:</label>
+     <textarea name="sms" cols="30" rows="5"></textarea>
+   </div>
+   
+   <div>
+   <button class="btn" type="submit">Submit</button>
+   </div>
+   
+   </form>
+
+  </body>
+</html>
