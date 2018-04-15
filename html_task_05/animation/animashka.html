@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Animashka</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="circle"></div>
+
+  <style>
+    body {
+    background:rgb(97, 140, 196);
+  }
+
+  .circle {
+    margin: 28% 45%;
+    width: 100px;
+    height: 100px;
+    background: rgb(187, 66, 22);
+    border-radius: 50px;
+    background: radial-gradient(circle at center,red,#80af08,blue,#bb07b2, #FF6347,#FFFF00,#FFDEAD);
+    background-position: 0 0px;
+    animation: animashka 8s linear;             
+    animation-iteration-count: infinite;}
+
+    @keyframes animashka {
+
+    0% {background-position: 0 0px;}
+    3% { background-position: 0 10px;}
+    6% { background-position: 0 30px;}
+    9% { background-position: 0 50px;}
+
+    12% {border-radius: 50px 50px;}
+    15% {border-radius: 30px 30px;}
+    18% {border-radius: 10px 10px;}
+    21% {border-radius: 0px 0px;}
+
+    24% {background-color: #FFDEAD;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdead', 
+        endColorstr='#9ACD32',GradientType=0);}
+
+    27% { background-position: 0px 0;}
+    30% { background-position: 20px 0;}
+    33% { background-position: 50px 0;}
+    36% { background-position: 60px 0;}
+
+    39% {transform: scale(1);}
+    42% {transform: scale(2);}
+    45% {transform: scale(3);}
+    48% {transform: scale(2);}
+    51% {transform: scale(1);}
+
+    54% {transform: skewX(-10deg);}
+    57% {transform: skewX(-15deg);}
+    60% {transform: skewX(-20deg);}
+    63% {transform: skewX(-15deg);}
+    66% {transform: skewX(-10deg);}
+    69% {transform: skewX(0deg);}
+
+    72% {transform: rotate(0deg);}
+    75% {transform: rotate(180deg);}
+    78% {transform: rotate(0deg);}
+
+    81% {background-color: #FFDEAD;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9ACD32', 
+        endColorstr='#FF00FF',GradientType=1);}
+
+    81% {background-position: 70px 0px;}
+    84% {background-position: 50px 20px;}
+    87% {background-position: 25px 40px;}
+    90% { background-position: 0px 60px;}
+
+    93% {border-radius: 0px 0px;}
+    96% {border-radius: 15px 15px;}
+    99% {border-radius: 30px 30px;}
+    100% {border-radius: 50px 50px;}
+    }
+  </style>
+ 
+
+  </body>
+</html>
