@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>DOM</title>
+	</head>
+	
+	<body>
+
+      
+
+        <p>Второе задание.</p><hr>
+
+        <span>Всякий текст</span>
+
+        <script>
+            
+            function deleteTextNodes(elem) {
+            for (var i=0; i< elem.childNodes.length; i++) {
+                var childElem = elem.childNodes[i];
+                if (elem.childNodes[i].nodeType == 3) {
+                elem.removeChild(elem.childNodes[i]);
+                i--;
+            }
+                if (childElem.nodeType == 1)
+                deleteTextNodes(childElem);
+            }
+            }
+                var body = document.body;    
+            deleteTextNodes(body);        
+          
+        </script>
+
+
+
+    </body>
+</html>
