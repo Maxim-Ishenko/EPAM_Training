@@ -1,0 +1,486 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Book-shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <!-- Общее поле окна страницы -->  
+  <body class="page">
+
+        <!-- Общий header -->
+      <header class="header page__header">
+            <!-- Блок ссылок на Help Center и Our Support -->
+            <!-- Ссылка на Help Center -->
+          <div class="header-reference header-reference_help">
+              <a class="reference header-reference__reference header-reference__reference_help" href="#">
+                  <span class="header__reference_text">Help Center</span>
+            </a>
+          </div>
+           <!-- Ссылка на Our Support -->
+          <div class="header-reference header-reference_support">
+                <a class="reference header-reference__reference header-reference__reference_support" href="#">
+                    <span class="header__reference_text">Our Support</span>
+                </a>
+          </div>
+
+          <!-- Блок с информацией о аккаунте -->
+          <section class="account header__account">
+                <!-- Фото аккаунта -->
+              <div class="account-img account__account-img">
+                  <img class="img account-img__img" src="image/1.jpg">
+              </div>
+               <!-- Имя аккаунта -->
+              <span class="name account__name">
+                John Doe
+              </span>
+               <!-- Панель-меню настроек аккаунта -->
+              <div class="menu account__menu">
+                  <button class="menu-button menu__menu-button">
+                    <i class="fa fa-chevron-circle-down fa-reverse fa-lg"></i>  
+                    <!-- ? <img class="img menu-button__img menu-button__img_account" src=""> -->
+                  </button>
+              </div>
+          </section>
+      </header>
+
+      <!-- Основное окно - навигация + окно с контентом -->
+      <div class="main-container page__main-container">
+
+            <!-- Панель навигации -->
+          <nav class="nav-panel main-container__nav-panel">
+                <!-- Кнопка добавить книгу -->
+              <div class="add-book nav-panel__add-book">
+                  <button class="button add-book__button">
+                    <i class="fa fa-plus fa-reverse fa-lg"></i>
+                    <span class="add-book__button_text">&nbsp;&nbsp;&nbsp;ADD A BOOK</span>
+                  </button>
+              </div>
+              <!-- Панель состояния -->
+              <div class="state-button-panel nav-panel__state-button-panel">
+
+                 <div class="list-state-panel state-button-panel__list">
+                    <div class="list-item list-state-panel__list-item list-state-panel__list-item_1">
+                        <a class="reference list-item__reference list-item__reference_now-read" href="">
+                            <i class="fa fa-book fa-reverse fa-fw"></i>
+                            <span class="list-item__reference_text">&nbsp;&nbsp;&nbsp;Now Reading</span>
+                        </a>
+                    </div>
+
+                    <div class="list-item list-state-panel__list-item list-state-panel__list-item_2">
+                        <a class="reference list-item__reference list-item__reference_browse" href="">
+                            <i class="fa fa-globe fa-reverse fa-fw"></i>
+                            <span class="list-item__reference_text">&nbsp;&nbsp;&nbsp;Browse</span>
+                        </a>
+                    </div>
+
+                    <div class="list-item list-state-panel__list-item list-state-panel__list-item_3">
+                        <a class="reference list-item__reference list-item__reference_buy" href="">
+                            <i class="fa fa-shopping-cart fa-reverse fa-fw"></i>
+                            <span class="list-item__reference_text">&nbsp;&nbsp;&nbsp;Buy Books</span>
+                        </a>
+                    </div>
+
+                    <div class="list-item list-state-panel__list-item list-state-panel__list-item_4">
+                        <a class="reference list-item__reference list-item__reference_favourite" href="">
+                            <i class="fa fa-star fa-reverse fa-fw"></i>
+                            <span class="list-item__reference_text">&nbsp;&nbsp;&nbsp;Favourite Books</span>
+                        </a>
+                    </div>
+
+                    <div class="list-item list-state-panel__list-item list-state-panel__list-item_5">
+                        <a class="reference list-item__reference list-item__reference_wish" href="">
+                            <i class="fa fa-th-list fa-reverse fa-fw"></i>
+                            <span class="list-item__reference_text">&nbsp;&nbsp;&nbsp;Wishlist</span>
+                        </a>
+                    </div>
+
+                    <div class="list-item list-state-panel__list-item list-state-panel__list-item_6">
+                        <a class="reference list-item__reference list-item__reference_history" href="">
+                            <i class="fa fa-clock-o fa-reverse fa-fw"></i>
+                            <span class="list-item__reference_text">&nbsp;&nbsp;&nbsp;History</span>
+                        </a>                       
+                    </div>
+                </div>
+
+              </div>
+              <!-- Панель рейтинга книг -->
+              <div class="rating nav-panel__rating">
+                  <div class="rating-list rating__rating-list">
+                      <div class="list-item rating-list__list-item rating-list__list-item_1">
+                            <a class="rating-list__list-item_reference rating-list__list-item_must-read" href="#">
+                                <i class="fa fa-circle fa-reverse fa-fw"></i> 
+                                <span class="rating-list__list-item_text">&nbsp;&nbsp;&nbsp;Must Read Titles</span>
+                            </a>
+                        </div>
+
+                      <div class="list-item rating-list__list-item rating-list__list-item_2">
+                        <a class="rating-list__list-item_reference rating-list__list-item_best" href="">
+                                <i class="fa fa-circle fa-reverse fa-fw"></i> 
+                                <span class="rating-list__list-item_text">&nbsp;&nbsp;&nbsp;Best of List</span>
+                        </a>
+                    </div>
+
+                      <div class="list-item rating-list__list-item rating-list__list-item_3">
+                        <a class="rating-list__list-item_reference rating-list__list-item_classic" href="">
+                                <i class="fa fa-circle fa-reverse fa-fw"></i> 
+                                <span class="rating-list__list-item_text">&nbsp;&nbsp;&nbsp;Classic Novels</span>
+                        </a>
+                    </div>
+
+                      <div class="list-item rating-list__list-item rating-list__list-item_4">
+                        <a class="rating-list__list-item_reference rating-list__list-item_nonfiction" href="">
+                                <i class="fa fa-circle fa-reverse fa-fw"></i> 
+                                <span class="rating-list__list-item_text">&nbsp;&nbsp;&nbsp;Non Fiction</span>
+                        </a>
+                    </div>
+                </div>
+              </div>
+
+              <!-- Информационная панель -->
+              <div class="info-panel nav-panel__info-panel">
+
+                  <div class="info-box info-panel__info-box info-panel__info-box_1">
+                      <div class="img info-box__img">
+                        <i class="fa fa-clock-o fa-reverse fa-fw info-box__img_clock"></i>
+                      </div>
+                      <div class="book-info info-box__book-info info-box__book-info_1">
+                        <div class="about-book book-info__about-book book-info__about-book_1">
+                              You added <a class="about-book__reference about-book__reference_name-of-book" href="#">Fight Club</a> by
+                              <a class="about-book__reference about-book__reference_author-of-book" href="#">Chuck Palahniuk</a> to your
+                              <a class="about-book__reference about-book__reference_rating-reference_must-read" href="#">Must Read Titles.</a>
+                        </div>
+                        <div class="timer book-info__timer book-info__timer_1">
+                              24 minutes ago
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="info-box info-panel__info-box info-panel__info-box_2">
+                      <div class="img info-box__img">
+                        <i class="fa fa-clock-o fa-reverse fa-fw info-box__img_clock"></i>
+                      </div>
+                      <div class="book-info info-box__book-info info-box__book-info_2">
+                          <div class="about-book book-info__about-book book-info__about-book_2">
+                                You added <a class="about-book__reference about-book__reference_name-of-book" href="#">The Trial</a> by
+                                <a class="about-book__reference about-book__reference_author-of-book" href="#">Franz Kafka</a> to your
+                                <a class="about-book__reference about-book__reference_rating-reference_must-read" href="#">Must Read Titles.</a>
+                          </div>
+                          <div class="timer book-info__timer book-info__timer_2">
+                                48 minutes ago
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+          </nav>
+
+          <!-- Основное окно контента + панель выбора книг -->
+          <section class="main-win main-container__main-win">
+
+              <header class="header main-win__header">
+                  <!-- Тема сайта -->
+                  <div class="site-title main-win__site-title">
+                        <span class="main-win__site-title_text">Browse Available Books</span>
+                  </div>
+                  <!-- Панель выбора типа книг -->
+                  <nav class="nav-panel header__nav-panel header__nav-panel_main-win-head">
+                      <div class="button-panel nav-panel__button-panel nav-panel__button-panel_main-win-head">
+                          <ul class="list button-panel__list button-panel__list_main-win-header">
+                              <li class="list-item list__list-item list__list-item_main-win-head list__list-item_main-win-head_first">
+                                  <button class="list__list-item_main-win-head_button">All Books</button>
+                                </li>
+                              <li class="list-item list__list-item list__list-item_main-win-head list__list-item_main-win-head_second">
+                                  <button class="list__list-item_main-win-head_button">Most Recent</button>
+                                </li>
+                              <li class="list-item list__list-item list__list-item_main-win-head list__list-item_main-win-head_third">
+                                  <button class="list__list-item_main-win-head_button">Most Popular</button>
+                                </li>
+                              <li class="list-item list__list-item list__list-item_main-win-head list__list-item_main-win-head_fourth">
+                                  <button class="list__list-item_main-win-head_button">Free Books</button>
+                                </li>
+                          </ul>
+                      </div>
+                      <!-- Панель поиска -->
+                        <form class="search-panel nav-panel__search-panel nav-panel__search-panel_main-win-head">
+                          <input class="search-field search-panel__search-field" type="text" placeholder="Enter Keywords">
+                          <div class="search-button search-panel__search-button">
+                              <button class="button search-button__button">
+                                <i class="fa fa-search fa-reverse fa-fw search-button__button_search"></i>
+                              </button>
+                          </div>
+                        </form>
+                  </nav>
+              </header>
+              <!-- Окно выбора книг -->
+              <main class="book-list main-win__book-list">
+
+                    <article class="book book-list__book book-list__book_1">  
+                        <a class="book-list__book_reference book-list__book_reference_book_1" href="#">
+                        <div class="fon-picture book__fon-picture book__fon-picture_1">
+                                
+                            <img class="img fon-picture__img fon-picture__img_1" src="image/hobbit.jpg">
+                    
+                        </div>
+
+                        <div class="name-of-book book__name-of-book book__name-of-book_1">
+                           The Hobbit
+                        </div>
+                        
+                        <div class="author-of-book book__author-of-book book__author-of-book_1">
+                            by J.R.R. Tolkien
+                        </div>
+
+                        <div class="stars book__stars book__stars_1">
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_1.1"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_1.2"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_1.3"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_1.4"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_1.5"></i>
+                        </div>
+                    </a>
+                    </article>
+
+                    <article class="book book-list__book book-list__book_2">
+                            <a class="book-list__book_reference book-list__book_reference_book_2" href="#">
+                        <div class="fon-picture book__fon-picture book__fon-picture_2">
+                            <img class="img fon-picture__img fon-picture__img_2"  src="image/lotr.png">
+                        </div>
+
+                        <div class="name-of-book book__name-of-book book__name-of-book_2">
+                            The Lord Of The Rings
+                        </div>
+                        
+                        <div class="author-of-book book__author-of-book book__author-of-book_2">
+                            by J.R.R. Tolkien
+                        </div>
+
+                        <div class="stars book__stars book__stars_2">
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_2.1"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_2.2"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_2.3"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_2.4"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_2.5"></i>
+                        </div>
+                        </a>
+                    </article>
+
+                    <article class="book book-list__book book-list__book_3">
+                            <a class="book-list__book_reference book-list__book_reference_book_3" href="#">
+                        <div class="fon-picture book__fon-picture book__fon-picture_3">
+                            <img class="img fon-picture__img fon-picture__img_3"  src="image/potter-fire.jpg">
+                        </div>
+
+                        <div class="name-of-book book__name-of-book book__name-of-book_3">
+                            Harry Potter and the Half-Blood Prince
+                        </div>
+                        
+                        <div class="author-of-book book__author-of-book book__author-of-book_3">
+                            by J.K. Rowling
+                        </div>
+
+                        <div class="stars book__stars book__stars_3">
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_3.1"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_3.2"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_3.3"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_3.4"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_3.5"></i>
+                        </div>
+                        </a>
+                    </article>
+
+                    <article class="book book-list__book book-list__book_4">
+                            <a class="book-list__book_reference book-list__book_reference_book_4" href="#">
+                        <div class="fon-picture book__fon-picture book__fon-picture_4">
+                            <img class="img fon-picture__img fon-picture__img_4"  src="image/holotrop.jpg">
+                        </div>
+
+                        <div class="name-of-book book__name-of-book book__name-of-book_4">
+                            The Holotropic Mind
+                        </div>
+                        
+                        <div class="author-of-book book__author-of-book book__author-of-book_4">
+                            by Stanislav Grof
+                        </div>
+
+                        <div class="stars book__stars book__stars_4">
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_4.1"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_4.2"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_4.3"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_4.4"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_4.5"></i>
+                        </div>
+                        </a>
+                    </article>
+
+                    <article class="book book-list__book book-list__book_5">
+                            <a class="book-list__book_reference book-list__book_reference_book_5" href="#">
+                        <div class="fon-picture book__fon-picture book__fon-picture_5">
+                            <img class="img fon-picture__img fon-picture__img_5"  src="image/dante.jpg">
+                        </div>
+
+                        <div class="name-of-book book__name-of-book book__name-of-book_5">
+                            The Divine Comedy
+                        </div>
+                        
+                        <div class="author-of-book book__author-of-book book__author-of-book_5">
+                            by Dante Alighieri
+                        </div>
+
+                        <div class="stars book__stars book__stars_5">
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_5.1"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_5.2"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_5.3"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_5.4"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_5.5"></i>
+                        </div>
+                        </a>
+                    </article>
+
+                    <article class="book book-list__book book-list__book_6">
+                            <a class="book-list__book_reference book-list__book_reference_book_6" href="#">
+                        <div class="fon-picture book__fon-picture book__fon-picture_6">
+                            <img class="img fon-picture__img fon-picture__img_6" src="image/fight-club.jpg">
+                        </div>
+
+                        <div class="name-of-book book__name-of-book book__name-of-book_6">
+                            Fight Club
+                        </div>
+                        
+                        <div class="author-of-book book__author-of-book book__author-of-book_6">
+                            by Chuck Palahnuik
+                        </div>
+
+                        <div class="stars book__stars book__stars_6">
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_6.1"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_6.2"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_6.3"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_6.4"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_6.5"></i>
+                        </div>
+                        </a>
+                    </article>
+
+                    <article class="book book-list__book book-list__book_7">
+                            <a class="book-list__book_reference book-list__book_reference_book_7" href="#">
+                        <div class="fon-picture book__fon-picture book__fon-picture_7" >
+                            <img class="img fon-picture__img fon-picture__img_7" src="image/grof.jpg">
+                        </div>
+
+                        <div class="name-of-book book__name-of-book book__name-of-book_7">
+                            The Ultimate Jorney
+                        </div>
+                        
+                        <div class="author-of-book book__author-of-book book__author-of-book_7">
+                            by Stanislav Grof
+                        </div>
+
+                        <div class="stars book__stars book__stars_7">
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_7.1"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_7.2"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_7.3"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_7.4"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_7.5"></i>
+                        </div>
+                        </a>
+                    </article>
+
+                        <article class="book book-list__book book-list__book_8">
+                                <a class="book-list__book_reference book-list__book_reference_book_8" href="#">
+                            <div class="fon-picture book__fon-picture book__fon-picture_8">
+                                <img class="img fon-picture__img fon-picture__img_8" src="image/kastaneda.jpg">
+                            </div>
+
+                            <div class="name-of-book book__name-of-book book__name-of-book_8">
+                                Don Juan
+                            </div>
+                            
+                            <div class="author-of-book book__author-of-book book__author-of-book_8">
+                                by Carlos Castaneda
+                            </div>
+
+                            <div class="stars book__stars book__stars_8">
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_8.1"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_8.2"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_8.3"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_8.4"></i>
+                            <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_8.5"></i>
+                            </div>
+                            </a>
+                        </article>
+
+                        <article class="book book-list__book book-list__book_9">
+                                <a class="book-list__book_reference book-list__book_reference_book_9" href="#">
+                            <div class="fon-picture book__fon-picture book__fon-picture_9">
+                                <img class="img fon-picture__img fon-picture__img_9" src="image/solaris.jpg">
+                            </div>
+
+                            <div class="name-of-book book__name-of-book book__name-of-book_9">
+                                Solaris
+                            </div>
+                            
+                            <div class="author-of-book book__author-of-book book__author-of-book_9">
+                                by Stanislav Lem
+                            </div>
+
+                            <div class="stars book__stars book__stars_9">
+                                <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_9.1"></i>
+                                <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_9.2"></i>
+                                <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_9.3"></i>
+                                <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_9.4"></i>
+                                <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_9.5"></i>
+                            </div>
+                            </a>
+                        </article>
+
+                        <article class="book book-list__book book-list__book_10">
+                                <a class="book-list__book_reference book-list__book_reference_book_10" href="#">
+                            <div class="fon-picture book__fon-picture book__fon-picture_10">
+                                <img class="img fon-picture__img fon-picture__img_10" src="image/three-man.jpg">
+                            </div>
+
+                            <div class="name-of-book book__name-of-book book__name-of-book_10">
+                                Three Men in a Boat
+                            </div>
+                            
+                            <div class="author-of-book book__author-of-book book__author-of-book_10">
+                                by Jerome K. Jerome
+                            </div>
+
+                            <div class="stars book__stars book__stars_10">
+                                <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_10.1"></i>
+                                <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_10.2"></i>
+                                <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_10.3"></i>
+                                <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_10.4"></i>
+                                <i class="fa fa-star fa-reverse fa-fw book-stars__star book-stars__star_10.5"></i>
+                            </div>
+                            </a>
+                        </article>
+              </main>
+
+            </section>
+      </div>
+
+      <footer class="footer page__footer">
+          <div class="button footer__button footer__button_question">
+              <button class="question button__question">
+                <i class="fa fa-question-circle fa-lg"></i>
+              </button>
+          </div>
+
+          <div class="button footer__button footer__button_instrument">
+              <button class="instrument button__instrument">
+                <i class="fa fa-gear fa-lg"></i>
+              </button>
+          </div>
+      </footer>
+
+
+      
+  </body>
+</html>
+      
