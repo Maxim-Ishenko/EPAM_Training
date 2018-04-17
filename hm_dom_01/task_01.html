@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>DOM</title>
+	</head>
+	
+	<body>
+
+        <p>Первое задание.</p><hr>
+
+        <span> First element </span>
+
+        <script>
+                var elem = document.createElement('div');
+                elem.innerHTML = '<b>Новый элемент</b>';
+              
+                function prepend(container, newElement) {
+                  return body.insertBefore(newElement, body.firstChild);
+                }
+              
+                var body = document.body;
+              
+                prepend(body, elem); 
+        </script>
+
+
+
+    </body>
+</html>
