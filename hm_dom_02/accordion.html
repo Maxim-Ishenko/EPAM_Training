@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Accordion</title>
+   
+    <style>
+        button.accordion {
+    background-color: #dee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;  
+}
+
+button.accordion.active,
+button.accordion:hover {
+    background-color: #ddb;
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+}
+
+div.panel.show {
+    display: block;
+}
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Fade to Black</h2>
+
+   <button class="accordion">First verse</button>
+   <div class="panel">
+       <p> Life it seems, will fade away<br>
+        Drifting further every day<br>
+        Getting lost within myself<br>
+        Nothing matters, no one else...<br></p>
+   </div>
+   <button class="accordion">Second verse</button>
+   <div class="panel">
+       <p>I have lost the will to live<br>
+        Simply nothing more to give<br>
+        There is nothing more for me<br>
+        Need the end to set me free<br></p>
+   </div>
+   <button class="accordion">Third verse</button>
+   <div class="panel">
+       <p>Things not what they used to be<br>
+        Missing one inside of me<br>
+        Deathly lost, this can’t be real<br>
+        Can’t stand this hell I feel<br></p>
+   </div>
+
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+                            this.classList.toggle("active");
+                            this.nextElementSibling.classList.toggle("show");
+            }, false) ;
+    }
+    </script>
+</body>
+
+</html>
