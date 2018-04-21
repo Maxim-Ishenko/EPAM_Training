@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>scanDom</title>
+	</head>
+	
+	<body>
+<!-- Коммент -->
+            <p class="par">Четвертое задание.</p><hr>
+            <div>Some <span>Text</span></div>
+    
+            <span class="spa">Всякий текст</span>
+            <span class="spa">Всякий текст</span>
+
+            <script>
+
+        function scanDom(){
+
+        var elements = document.body.childNodes;
+        var obj = {};
+        obj['textNode'] = 0;
+        obj['commentNode'] = 0;
+
+        for (var i = 0; i < elements.length; i++) {
+            if (elements[i].nodeType == 1) {
+                if (obj[elements[i].tagName]) {
+                    obj[elements[i].tagName]+=1;
+                } else {
+                    obj[elements[i].tagName]=1;
+                }
+                if (obj[elements[i].className]) {
+                    obj[elements[i].className]+=1;
+                } else {
+                    obj[elements[i].className]=1;
+                }  
+            }
+            else if (elements[i].nodeType == 3) {
+                obj['textNode']+=1;
+            }
+            else if (elements[i].nodeType == 8) {
+                obj['commentNode']+=1;
+            }
+        }
+
+        for (var key in obj) {
+            if (obj[key] > 0 && key) { 
+                console.log(key+":"+obj[key]);
+                }
+            }
+        }
+
+        scanDom();
+
+            </script>
+
+        </body>
+    </html>
+    
