@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Debounce</title>
+</head>
+
+    <body>
+        <button id="btn" onclick='wail()'>Push me!!!</button>
+
+        <script>
+            function debounce(func, wait, immediate) {
+                var timeout;
+                return function() {
+                    var ctx = this; 
+                    var args = arguments;
+                    var later = function() {
+                        timeout = null;
+                        if (!immediate) func.apply(ctx, args);
+                    };
+                    var callNow = immediate && !timeout;
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                    if (callNow) func.apply(ctx, args);
+                };
+            };
+
+            var wail = debounce(function() {
+                alert("AAAAAAAAAAAAAAAAAAAA");
+            }, 3000);
+        </script>
+        
+    </body>
+</html>
