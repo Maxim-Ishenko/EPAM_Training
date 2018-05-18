@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>g(o_O)gla_map</title>
+        <meta charset="utf-8">
+        <link rel='stylesheet' type='text/css' href='style.css'></style>
+    </head>
+
+<body>
+
+    <h2 id='h2' style='margin-left: 40px;'>My first googleMaps project</h2>
+
+    <main id='main'>
+
+        <nav id='nav_panel'>
+            <form id='form'>
+                <input id='city' type='text' placeholder='City' value=''/>
+                <input id='street' type='text' placeholder='Street' value=''/>
+                <input id='home' type='text' placeholder='Home number' value=''/>
+                <input id="submit" type="button" value="Поиск">
+            </form>
+        </nav>
+
+        <div id='map'></div>
+
+    </main>
+
+    <script src='main.js'></script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmYP5dcx9OB5YkgMgrRKKcYOSM1h6YIHk&callback=initMap">
+    </script>
+</body>
+
+</html>
