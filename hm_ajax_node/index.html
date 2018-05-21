@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link href="index3.css" rel="stylesheet" type="text/css">
+  <title>Server</title>
+</head>
+
+<body>
+
+<h2>Super Mega Something</h2><hr>
+<br>
+  <table id="table">
+        <tr>
+            <th class='g'>№</th>
+            <th class='g'>Author</th>
+            <th class='g'>Name</th>
+            <th class='g'>Genre</th>
+            <th class='g'>Year</th>
+        </tr>
+    </table><br><hr>
+
+  <!-- <button id="edit_delete">edit/delete books</button> -->
+  <button id="addBook" onclick="manifestation()">add book</button>
+  <button id="loadBooks" onclick="load()">load books</button>
+  <hr><br>
+
+  <div id='help'>
+      Здравствуйте!<br><br>
+      1. Для начала работы необходимо загрузить данные с сервера,<br>
+      кликнув по кнопке /load books/ <br><br>
+      2. Для удаления или редактирования книги в базе данных сервера<br>
+      достаточно просто кликнуть по соответствующей книге в табличке,<br>
+      приведенной выше. <br><br>
+      3. Заполнив форму, открывающуюся при щелчке по кнокпке /add book/,<br>
+      можно добавить в базу данных сервера новую книгу.
+  </div>
+
+    <div class="popup add-book_form" id="display">
+            <a class="close" href="#">
+                <img src='img/close.png' onclick="disappearance()">
+            </a>
+            <h2>Add the book</h2>
+            <form method="post" name="book-form" onsubmit="return false;">
+                <div class="name">
+                    <label for="name-of-book">Name:</label>
+                    <input type="text" name="name-of-book" id='name_input'>
+                </div>
+                <div class="author">
+                    <label for="author-of-book">Author:</label>
+                    <input type="text" name="author-of-book" id='author_input'>
+                </div>
+                <div class="genre">
+                    <label for="genre-of-book">Genre:</label>
+                    <input type="text" name="genre-of-book" id='genre_input'>
+                </div>
+                    <div class="year">
+                        <label for="year-of-book">Year:</label>
+                        <input type="text" name="year-of-book" id='year_input'>
+                    </div>
+                <input type="submit" value="ADD" onclick="addBook()">
+            </form>
+        </div>
+
+        <div class="popup edit-book_form" id="display-edit">
+            <a class="close" href="#">
+                <img src='img/close.png' onclick="disappearance2()">
+            </a>
+            <h2>Edit/delete the book</h2>
+            <form method="post" name="book-form" onsubmit="return false;">
+                <div class="name">
+                    <label for="name-of-book">Name:</label>
+                    <input type="text" name="name-of-book" id='name_input__edit'>
+                </div>
+                <div class="author">
+                    <label for="author-of-book">Author:</label>
+                    <input type="text" name="author-of-book" id='author_input__edit'>
+                </div>
+                <div class="genre">
+                    <label for="genre-of-book">Genre:</label>
+                    <input type="text" name="genre-of-book" id='genre_input__edit'>
+                </div>
+                    <div class="year">
+                        <label for="year-of-book">Year:</label>
+                        <input type="text" name="year-of-book" id='year_input__edit'>
+                    </div>
+                <input type="button" value="EDIT" onclick="editBook()">
+                <input type="button" value="DELETE" onclick="delBook()">
+                <input type="button" value="CANSEL" onclick="disappearance2()">
+            </form>
+        </div>
+  <script src='main.js'></script>
+</body>
+
+</html>
