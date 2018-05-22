@@ -175,7 +175,7 @@ function editBook() {
     disappearance2();
 
     for (var i = 0; i < books.length; i++) {
-        if (books[i].name === target.querySelector('.nameTD').innerHTML && target.querySelector('.authorTD').innerHTML) {
+        if (books[i].name === target.querySelector('.nameTD').innerHTML && books[i].author === target.querySelector('.authorTD').innerHTML) {
             books[i].name = name_input__edit.value;
             books[i].author = author_input__edit.value;
             books[i].genre = genre_input__edit.value;
