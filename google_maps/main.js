@@ -18,6 +18,7 @@
             document.getElementById('submit').addEventListener('click', function() {
                 fromAddressToPoint(geocoder, map);
                 markers.push(marker);
+                map.zoom = 18;
                 console.dir(markers);
                 
             });
